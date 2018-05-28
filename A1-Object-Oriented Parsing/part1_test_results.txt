@@ -1,0 +1,173 @@
+Test Case 1 Result
+Code:
+     0: iconst_5
+     1: istore_1
+     2: iload_1
+     3: bipush 6
+     5: imul
+     6: iconst_1
+     7: iadd
+     8: istore_2
+     9: iload_2
+     10: bipush 127
+     12: imul
+     13: iload_1
+     14: sipush 128
+     17: idiv
+     18: isub
+     19: istore_3
+     20: iload_1
+     21: sipush 1111
+     24: iadd
+     25: iload_2
+     26: sipush 2222
+     29: isub
+     30: imul
+     31: iload_3
+     32: sipush 3333
+     35: iadd
+     36: idiv
+     37: istore 4
+     39: iload 4
+     41: iload 4
+     43: imul
+     44: istore 5
+
+
+Test Case 2 Result   
+Code:
+     0: bipush 66
+     2: istore_1
+     3: iconst_0
+     4: istore_2
+     5: iload_1
+     6: bipush 10
+     8: if_icmpge 13
+     11: iconst_1
+     12: istore_2
+     13: iload_1
+     14: bipush 50
+     16: if_icmple 21
+     19: iconst_5
+     20: istore_2
+     21: iload_1
+     22: bipush 100
+     24: if_icmpne 30
+     27: bipush 10
+     29: istore_2
+
+
+Test Case 3 Result  
+Code:
+     0: bipush 30
+     2: istore_1
+     3: bipush 20
+     5: istore_2
+     6: bipush 10
+     8: istore_3
+     9: iload_1
+     10: iload_2
+     11: if_icmple 48
+     14: iload_2
+     15: iload_3
+     16: if_icmple 28
+     19: iload_3
+     20: istore 5
+     22: iload_1
+     23: istore 4
+     25: goto 45
+     28: iload_2
+     29: istore 5
+     31: iload_1
+     32: iload_3
+     33: if_icmple 42
+     36: iload_1
+     37: istore 4
+     39: goto 45
+     42: iload_3
+     43: istore 4
+     45: goto 79
+     48: iload_2
+     49: iload_3
+     50: if_icmpge 62
+     53: iload_1
+     54: istore 5
+     56: iload_3
+     57: istore 4
+     59: goto 79
+     62: iload_2
+     63: istore 4
+     65: iload_1
+     66: iload_3
+     67: if_icmpge 76
+     70: iload_1
+     71: istore 5
+     73: goto 79
+     76: iload_3
+     77: istore 5
+
+
+Test Case 4 Result 
+Code:
+     0: iconst_1
+     1: istore_1
+     2: iconst_1
+     3: istore_2
+     4: iconst_5
+     5: istore_3
+     6: iload_1
+     7: iload_3
+     8: if_icmpge 22
+     11: iload_1
+     12: iconst_1
+     13: iadd
+     14: istore_1
+     15: iload_2
+     16: iload_1
+     17: imul
+     18: istore_2
+     19: goto 6
+
+
+Test Case 5 Result 
+Code:
+     0: bipush 55
+     2: istore_2
+     3: bipush 77
+     5: istore_3
+     6: iload_2
+     7: iload_3
+     8: if_icmpeq 58
+     11: iload_2
+     12: iload_3
+     13: if_icmple 37
+     16: iconst_1
+     17: istore_1
+     18: iload_1
+     19: iload_3
+     20: if_icmpgt 34
+     23: iload_2
+     24: iconst_1
+     25: isub
+     26: istore_2
+     27: iload_1
+     28: iconst_1
+     29: iadd
+     30: istore_1
+     31: goto 18
+     34: goto 55
+     37: iconst_1
+     38: istore_1
+     39: iload_1
+     40: iload_2
+     41: if_icmpgt 55
+     44: iload_3
+     45: iconst_1
+     46: isub
+     47: istore_3
+     48: iload_1
+     49: iconst_1
+     50: iadd
+     51: istore_1
+     52: goto 39
+     55: goto 6
