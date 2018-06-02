@@ -1,0 +1,17 @@
+fun(f,(if(n>3,ans=n+5,ans=call(g,[n-1]));return(ans)))
+
+fun(g,(if(n>4,ans=call(k,[n-10]),ans=call(h,[n-1]));return(ans)))
+
+fun(h,(if(n>5,ans=n-10,ans=call(f,[n-1]));return(ans)))
+
+fun(k,(i=2;p=1;sq=call(t,[n]);while((i<sq)+1,(if(p==1,if(n==0,exit));i=i+1));return(p)))
+
+fun(p,(m1=10;m2=call(r,[m1,y,z]);m=(call(f,[m1+m2])+call(s,[m1,m2]))*call(k,[m2]);return(m)))
+
+fun(q,(if(x>y,m=x,m=y);return(m)))
+
+fun(r,(if(i<j,if(j<k,m=call(un1,[k]),m=j),if(i<k,m=k,m=i));return(m)))
+
+fun(s,(if(x>y,return(call(s,[x-y,y])));if(x<y,return(call(s,[x,y-x])));return(x)))
+
+fun(t,(hi=call(un2,[1]);while(hi<n,hi=hi+1);lo=hi-1;if(n-lo<hi,sq=lo,sq=hi);return(sq)))
