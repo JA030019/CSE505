@@ -5,7 +5,6 @@ go :- write('Tiny PL Call Graph Analyzer. Commands are:'), nl,
       write('   all_calls(f, L).'), nl,
       nl.
 
-/*  Commented out the calls/2 facts for Problem 3
 calls(f,[g]).
 calls(g,[h,k]).
 calls(h,[f]).
@@ -15,7 +14,6 @@ calls(q,[]).
 calls(r,[un1]).
 calls(s,[s]).
 calls(t,[un2]).
-*/
 
 % F directly call A
 directcall(F, A) :- calls(F, L), member(A, L).
@@ -24,7 +22,7 @@ directcall(F, A) :- calls(F, L), member(A, L).
 callers(F, L) :- setof(Y, F^directcall(Y, F), L).
 
 % Write undefined(L) here
-undefined(L) :- setof(Y, X^directcall(X, Y), L1),
+undefined(L) :- setof(Y, X^directcall(X, Y), L1), 
 			    callers(F, L2),
 			    subtract(L1, L2, L).
 
